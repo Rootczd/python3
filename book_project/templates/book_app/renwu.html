@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 定义一个title的 变量名标签 Tem_title -->
+    <title>{{Tem_title}}</title>
+</head>
+<body>
+<!-- 定义一个超链接，用于返回图书的展示页面 -->
+<a href="/book/">返回上一级</a>
+<!-- 定义一个图书名称的 变量名标签 Tem_book -->
+<h1>图书名称: {{Tem_book}}</h1>
+<!-- 定义一个遍历用的标签，主要的功能就是，获取变量名标签Tem_herolist中所有的实例对象 -->
+{%for hero in Tem_herolist%}
+    <!-- 因为hero是一个遍历后的具体的人物实例对象，所以他有HeroInfo类的属性，所以 hero.name获取该实例对象的人物名称，而 hero.hcomment获取的是该实例对象的人物注释信息-->
+	<li>英雄: {{hero.hname}} 会的功夫是 {{hero.hcomment}}</li>
+{%endfor%}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 定义一个title的 变量名标签 Tem_title -->
+    <title>{{Tem_title}}</title>
+</head>
+<body>
+<!-- 定义一个遍历用的标签，主要的功能就是，获取变量名标签Tem_booklist中所有的实例对象 -->
+{%for book in Tem_booklist%}
+     <!-- 因为book是一个遍历后的具体的实例对象，所以他有类的属性，所以 book.id获取该实例对象的主键id，而 book.btitle获取的是该实例对象的图书名称-->
+{#	<li><a href="/renwu{{book.id}}/">{{book.btitle}}</a></li>#}
+    <li><a href="/renwu{{book.id}}/">{{forloop.counter}}： {{book.btitle}}</a></li>
+{%endfor%}
+</body>
+</html>

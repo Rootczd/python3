@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}转义效果{% endblock title %}
+{%block body %}
+    自动转义{{Tem_context }}
+    <hr>
+    模板硬编码默认值不转义
+    {{ data|default:'<b>hello</b>' }}
+{% endblock body %}
+
